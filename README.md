@@ -54,7 +54,18 @@
 }
 ```
 
-### 3. a `POST /purchase` request, the ticket is already booked
+### 3. a `POST /stats` request with the correct password
+
+*Response Body*
+```
+{
+    "income": 10,
+    "purchasedTickets": 1,
+    "availableSeats": 80
+}
+```
+
+### 4. a `POST /purchase` request, the ticket is already booked
 
 *Request Body*
 ```
@@ -71,7 +82,7 @@
 }
  ```
 
-### 4. a `POST /return` with the correct token
+### 5. a `POST /return` with the correct token
 
 *Request Body*
 ```
@@ -91,7 +102,7 @@
 }
 ```
 
-### 5. a `POST /stats` request with no parameters
+### 6. a `POST /stats` request with no parameters
 
 *Response Body*
 ```
@@ -101,14 +112,14 @@
 ```
 
 
-### 6. a `POST /stats` request with the correct password
+### 7. a `POST /stats` request with the correct password
 
 *Response Body*
 ```
 {
-    "income": 10,
-    "purchasedTickets": 1,
-    "availableSeats": 80
+    "income": 0,
+    "purchasedTickets": 0,
+    "availableSeats": 81
 }
 ```
 
