@@ -4,7 +4,7 @@
 
 ### 1. a `GET /seats` request
 
-*Response Body*
+*Response Body, Status: `200 OK`*
 ```
 {
     "total_rows": 9,
@@ -41,7 +41,7 @@
 }
  ```
 
-*Response Body*
+*Response Body, Status: `200 OK`*
 
 ```
 {
@@ -56,7 +56,7 @@
 
 ### 3. a `POST /stats` request with the correct password
 
-*Response Body*
+*Response Body, Status: `200 OK`*
 ```
 {
     "income": 10,
@@ -75,7 +75,7 @@
 }
 ```
 
-*Response Body*
+*Response Body, Status: `400 Bad Request`*
  ```
  {
     "error": "The ticket has been already purchased!"
@@ -91,7 +91,7 @@
 }
 ```
 
-*Response Body*
+*Response Body, Status: `200 OK`*
 ```
 {
     "return_ticket": {
@@ -104,7 +104,7 @@
 
 ### 6. a `POST /stats` request with no parameters
 
-*Response Body*
+*Response Body, Status: `401 Unauthorized`*
 ```
 {
     "error": "The password is wrong!"
@@ -114,7 +114,7 @@
 
 ### 7. a `POST /stats` request with the correct password
 
-*Response Body*
+*Response Body, Status: `200 OK`*
 ```
 {
     "income": 0,
