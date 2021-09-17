@@ -25,7 +25,7 @@ public class SeatService {
         return true;
     }
 
-    // GET-Done
+    // GET
     public Object getAvailableSeats() {
         List<Seat> availableSeats = new ArrayList<>();
         int price = 10;
@@ -45,7 +45,7 @@ public class SeatService {
                 "available_seats", availableSeats);
     }
 
-    // POST-Done
+    // POST
     public Object purchaseSeat(Seat seat) {
         if (seat.getRow()<1||seat.getColumn()<1||seat.getRow()>9||seat.getColumn()>9) {
             // throw new Exception 400-BAD_REQUEST
@@ -74,7 +74,7 @@ public class SeatService {
         }
     }
 
-    // POST-Done
+    // POST
     public Object cancelTicket(String token) {
         int i=0;
         Seat removedToken = null;
